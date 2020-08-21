@@ -1,0 +1,114 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Mobile First Stylesheet - Max-Width 500px*/
+.container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 40px 25px;
+    border: 5px dashed dodgerblue;
+    height: 75vh;
+    background: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: dodgerblue;
+    font-weight: 700;
+}
+header h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 3rem;
+    text-align: center;
+    color: darkred;
+    font-weight: 600;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main img {
+    width: 350px;
+}
+main img {
+    -webkit-animation: mover 0.5s infinite  alternate;
+    animation: mover 0.5s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer button {
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    background: darkred;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+footer button:hover {
+    background: dodgerblue;
+    color: white;
+}
