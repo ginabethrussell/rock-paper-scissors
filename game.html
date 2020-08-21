@@ -12,10 +12,21 @@
     <div class='container'>
         <header>
             <h1>Rock, Paper, Scissors</h1>
-            <h2>Let's Play a Game</h2>
+            <h2>Click a Pic to Play</h2>
         </header>
-        <main>
-            <img src="assets/rock.png" alt="a cartoon rock character">
+        <main class="game-page">
+            <div class="result-window">
+                <h3 id="player-choice"></h3>
+                <h3 id="computer-choice"></h3>
+                <h3 id="game-message"></h3>
+
+            </div>
+            <div class="game-buttons">
+                <button id='rock' onclick="playRPS('rock', 0);"><img src="assets/rock.png" alt="rock"></button>
+                <button id='paper' onclick="playRPS('paper', 1);"><img src="assets/paper.jpg" alt="paper"></button>
+                <button id='scissors' onclick="playRPS('scissors', 2);"><img src="assets/scissors.jpg" alt="scissors"></button>
+                
+            </div>
         </main>
         <footer>
             <button onclick="window.location.href = 'index.html'">Quit</button>

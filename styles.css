@@ -51,9 +51,9 @@ table {
 .container {
     width: 500px;
     margin: 50px auto;
-    padding: 40px 25px;
+    padding: 25px 0;
     border: 5px dashed dodgerblue;
-    height: 75vh;
+    /* height: 75vh; */
     background: lightgoldenrodyellow;
     display: flex;
     flex-direction: column;
@@ -78,11 +78,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
-main img {
+main.splash-page img {
     width: 350px;
-}
-main img {
     -webkit-animation: mover 0.5s infinite  alternate;
     animation: mover 0.5s infinite  alternate;
 }
@@ -94,6 +93,7 @@ main img {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
 }
+
 footer {
     display: flex;
     justify-content: center;
@@ -111,4 +111,48 @@ footer button {
 footer button:hover {
     background: dodgerblue;
     color: white;
+}
+/* game.html Stylesheet */
+
+main.game-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main.game-page .result-window {
+    height: 250px;
+    padding: 25px;
+    background: lightcyan;
+    border: 2px solid #545454;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+main.game-page .result-window h3 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: green;
+}
+main.game-page .game-buttons {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-self: center;
+    margin-bottom: 25px;
+}
+
+main.game-page .game-buttons button {
+    width: 125px;
+    height: 125px;
+    overflow: hidden;
+    border: 2px solid #545454;
+    border-radius: 10px;
+
+}
+main.game-page .game-buttons button img {
+    height: 125px;
 }
