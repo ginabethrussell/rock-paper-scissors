@@ -148,7 +148,8 @@ main.game-page .score .score-box {
     align-items:center;
 }
 main.game-page .score .score-box {
-    font-size: 4rem;
+    font-size: 3.6rem;
+    padding: 5px;
     font-weight: 400;
     font-family: 'Roboto', monospace;
     color: #545454;
