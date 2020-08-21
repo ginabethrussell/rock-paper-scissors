@@ -1,3 +1,6 @@
+var playerScore = 0;
+var compScore = 0;
+
 function playRPS(playerChoice, value) {
 
     // generate a random integer value (0,1,2) for computer choice
@@ -18,6 +21,13 @@ function playRPS(playerChoice, value) {
     const gameMessage = compareChoices(value, compChoice);
     let gameMessDisplayElement = document.getElementById('game-message');
     gameMessDisplayElement.textContent = gameMessage;
+
+    let compScoreDisplay = document.getElementById('comp-score');
+    compScoreDisplay.textContent = compScore;
+
+    let playerScoreDisplay = document.getElementById('player-score');
+    playerScoreDisplay.textContent = playerScore;
+
 }
 
 function getCompChoice(){
@@ -32,20 +42,26 @@ function compareChoices(playerChoice, compChoice){
         return "We tied!";
     }else if (playerChoice === 0){ // user chooses rock
         if(compChoice === 1){   //computer chooses paper
+            compScore++;
             return "You lose.";
         }else {                 //computer chooses scissors
+            playerScore++;
             return "You win!";
         }
     }else if (playerChoice === 1){ // user chooses paper
         if (compChoice === 0) {  // computer chooses rock
+            playerScore++;
             return "You win!"
         }else {                  // computer chooses scissors
+            compScore++;
             return "You lose."
         }
     }else {                     //user chooses scissors
         if (compChoice === 0){  // computer chooses rock
+            compScore++;
             return "You lose."
         }else {
+            playerScore++;
             return "You win!"   //computer chooses paper
         }
     } 
