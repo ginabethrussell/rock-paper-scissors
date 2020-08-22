@@ -35,37 +35,53 @@ function getCompChoice(){
     return Math.floor(Math.random() * 3);
 }
 
+// compare choices and return game tie, win, or lose message
 function compareChoices(playerChoice, compChoice){
-    console.log(playerChoice, compChoice);
-    //set up game logic to determine the winner  
-    if (playerChoice === compChoice) { // check for a tie
+    //check for a tie
+    if (playerChoice === compChoice){
         return "We tied!";
-    }else if (playerChoice === 0){ // user chooses rock
-        if(compChoice === 1){   //computer chooses paper
-            compScore++;
-            return "You lose.";
-        }else {                 //computer chooses scissors
-            playerScore++;
-            return "You win!";
-        }
-    }else if (playerChoice === 1){ // user chooses paper
-        if (compChoice === 0) {  // computer chooses rock
-            playerScore++;
-            return "You win!"
-        }else {                  // computer chooses scissors
-            compScore++;
-            return "You lose."
-        }
-    }else {                     //user chooses scissors
-        if (compChoice === 0){  // computer chooses rock
-            compScore++;
-            return "You lose."
-        }else {
-            playerScore++;
-            return "You win!"   //computer chooses paper
-        }
-    } 
+        //use logical operators for all possible wins
+    }else if (playerChoice === 0 && compChoice === 2 || //rock beats scissors
+                playerChoice === 1 && compChoice === 0 || //paper beats rock
+                playerChoice === 2 && compChoice === 1) { //scissors beat paper
+        playerScore ++;
+        return "You win!";
+    }else {
+        compScore ++;
+        return "You lose!";
+    }
 }
+// function compareChoices(playerChoice, compChoice){
+//     console.log(playerChoice, compChoice);
+//     //set up game logic to determine the winner  
+//     if (playerChoice === compChoice) { // check for a tie
+//         return "We tied!";
+//     }else if (playerChoice === 0){ // user chooses rock
+//         if(compChoice === 1){   //computer chooses paper
+//             compScore++;
+//             return "You lose.";
+//         }else {                 //computer chooses scissors
+//             playerScore++;
+//             return "You win!";
+//         }
+//     }else if (playerChoice === 1){ // user chooses paper
+//         if (compChoice === 0) {  // computer chooses rock
+//             playerScore++;
+//             return "You win!"
+//         }else {                  // computer chooses scissors
+//             compScore++;
+//             return "You lose."
+//         }
+//     }else {                     //user chooses scissors
+//         if (compChoice === 0){  // computer chooses rock
+//             compScore++;
+//             return "You lose."
+//         }else {
+//             playerScore++;
+//             return "You win!"   //computer chooses paper
+//         }
+//     } 
+// }
 
 
     
