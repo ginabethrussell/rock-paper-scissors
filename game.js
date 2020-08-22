@@ -51,38 +51,6 @@ function compareChoices(playerChoice, compChoice){
         return "You lose!";
     }
 }
-// function compareChoices(playerChoice, compChoice){
-//     console.log(playerChoice, compChoice);
-//     //set up game logic to determine the winner  
-//     if (playerChoice === compChoice) { // check for a tie
-//         return "We tied!";
-//     }else if (playerChoice === 0){ // user chooses rock
-//         if(compChoice === 1){   //computer chooses paper
-//             compScore++;
-//             return "You lose.";
-//         }else {                 //computer chooses scissors
-//             playerScore++;
-//             return "You win!";
-//         }
-//     }else if (playerChoice === 1){ // user chooses paper
-//         if (compChoice === 0) {  // computer chooses rock
-//             playerScore++;
-//             return "You win!"
-//         }else {                  // computer chooses scissors
-//             compScore++;
-//             return "You lose."
-//         }
-//     }else {                     //user chooses scissors
-//         if (compChoice === 0){  // computer chooses rock
-//             compScore++;
-//             return "You lose."
-//         }else {
-//             playerScore++;
-//             return "You win!"   //computer chooses paper
-//         }
-//     } 
-// }
-
 
     
 

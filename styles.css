@@ -146,8 +146,6 @@ main.game-page .score .score-box {
     display: flex;
     justify-content: center;
     align-items:center;
-}
-main.game-page .score .score-box {
     font-size: 3.6rem;
     padding: 5px;
     font-weight: 400;
@@ -191,4 +189,69 @@ main.game-page .game-buttons button {
 }
 main.game-page .game-buttons button img {
     height: 100px;
+}
+
+/* Responsiveness for smaller screens < 500px */
+@media (max-width: 499px){
+    .container {
+        width: 75%;
+        min-width: 250px;
+        margin-top: 10px;
+    }
+    header h1 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin: 0 5px 0;
+    }
+    header h2 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+    main {
+        width: 90%;
+    }
+    main.splash-page {
+        margin-top: 35px;
+    }
+    main.splash-page img {
+        width: 225px;
+    }
+    footer button {
+        margin-top: 10px;
+        width: 120px;
+        font-size: 2rem;
+    }
+    main.game-page .score h4 {
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    main.game-page .score .score-box {
+        height: 50px;
+        width: 50px;
+        margin: 10px 0;
+        font-size: 3rem;
+        padding: 5px;
+    }
+    main.game-page .result-window {
+        height: 150px;
+        padding: 5px;
+        width: 85%;
+        margin-bottom: 15px;
+    }
+    main.game-page .result-window h3 {
+        font-weight: 400;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    main.game-page .game-buttons {
+        margin-bottom: 10px;
+    }
+    main.game-page .game-buttons button {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+    }
 }
