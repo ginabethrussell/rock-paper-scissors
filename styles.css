@@ -96,11 +96,13 @@ main.splash-page img {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 footer button {
-    margin-top: 20px;
+    margin: 20px 0;
     width: 150px;
     height: 50px;
     border-radius: 5px;
@@ -112,6 +114,17 @@ footer button {
 footer button:hover {
     background: dodgerblue;
     color: white;
+}
+footer p {
+    color: #545454;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+footer p a {
+    color: #545454;
+    text-decoration: none;
 }
 /* game.html Stylesheet */
 
